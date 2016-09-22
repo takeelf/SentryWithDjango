@@ -32,7 +32,7 @@ LOGGING = {
             'formatter': 'verbose'
         }
     },
-    '''
+    ...
 ```
 
  * Usage
