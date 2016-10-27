@@ -42,4 +42,17 @@ logger.error('error test', exc_info=True, extra={
 })
 ```
 
+ * On settings
+ * from sentry web:8080 after create project
+```
+import os
+import raven
+
+RAVEN_CONFIG = {
+    'dsn': 'http://****:****@0.0.0.0:8080/2',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    'release': raven.fetch_git_sha(os.path.dirname(__file__)),
+}
+```
 
